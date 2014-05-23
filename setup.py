@@ -30,7 +30,9 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'sqlalchemy',
+        'psycopg2',
+        'SQLAlchemy',
+        'zope.sqlalchemy',
     ],
     entry_points="""
     # -*- Entry points: -*-
