@@ -35,6 +35,7 @@ setup(
         'zope.sqlalchemy',
     ],
     entry_points="""
-    # -*- Entry points: -*-
+    [console_scripts]
+    init_db = imio.dataexchange.db.scripts.init_db:main
     """,
 )
