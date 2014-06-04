@@ -10,7 +10,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy import Text
 from sqlalchemy import DateTime
 from sqlalchemy import func
-#from sqlalchemy.dialects.postgresql import JSON
+# from sqlalchemy.dialects.postgresql import JSON
 from sqlalchemy.schema import UniqueConstraint
 
 import json as jsonmodule
@@ -42,7 +42,7 @@ class File(DeclarativeBase, MapperBase):
     user = Column(u'user', Text, nullable=False)
 
     _file_metadata = Column(u'metadata', Text, nullable=False)
-    #file_metadata = Column(u'metadata', JSON, nullable=False)
+    # file_metadata = Column(u'metadata', JSON, nullable=False)
 
     filepath = Column(u'filepath', Text)
 
