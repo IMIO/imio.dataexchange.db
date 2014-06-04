@@ -2,9 +2,11 @@
 
 from imio.dataexchange.db import DeclarativeBase
 from imio.dataexchange.db.base import MapperBase
+from imio.dataexchange.db.mappers.file_type import FileType
 from sqlalchemy import Boolean
 from sqlalchemy import Column
 from sqlalchemy import Integer
+from sqlalchemy import ForeignKey
 from sqlalchemy import Text
 from sqlalchemy import DateTime
 from sqlalchemy import func
@@ -12,6 +14,8 @@ from sqlalchemy import func
 from sqlalchemy.schema import UniqueConstraint
 
 import json as jsonmodule
+
+FileType  # Pyflakes
 
 
 class File(DeclarativeBase, MapperBase):
@@ -24,6 +28,10 @@ class File(DeclarativeBase, MapperBase):
     id = Column(u'id', Integer, primary_key=True, unique=True, nullable=False)
 
     external_id = Column(u'external_id', Text, nullable=False)
+
+    client_id = Column(u'client_id', Text, nullable=False)
+
+    type = Column(u'type', Text, ForeignKey('file_type.id'), nullable=False)
 
     version = Column('version', Integer, nullable=False)
 
