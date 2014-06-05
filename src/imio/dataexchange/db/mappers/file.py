@@ -55,4 +55,8 @@ class File(DeclarativeBase, MapperBase):
 
     @file_metadata.setter
     def file_metadata(self, value):
-        self._file_metadata = value
+        metadata = value.copy()
+        del metadata['type']
+        del metadata['external_id']
+        del metadata['client_id']
+        self._file_metadata = jsonmodule.dumps(metadata)
