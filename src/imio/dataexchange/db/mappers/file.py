@@ -46,6 +46,8 @@ class File(DeclarativeBase, MapperBase):
 
     filepath = Column(u'filepath', Text)
 
+    file_md5 = Column(u'file_md5', Text)
+
     amqp_status = Column(u'amqp_status', Boolean, nullable=False,
                          server_default="false")
 
