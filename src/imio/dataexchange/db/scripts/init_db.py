@@ -4,12 +4,13 @@ from ConfigParser import ConfigParser
 from imio.dataexchange.db import DBSession
 from imio.dataexchange.db import DeclarativeBase
 from imio.dataexchange.db.mappers.file import File
+from imio.dataexchange.db.mappers.request import Request
 from sqlalchemy import engine_from_config
 
 import argparse
 import os
 
-File  # Pyflakes fix
+File, Request  # Pyflakes fix
 
 
 def main():
