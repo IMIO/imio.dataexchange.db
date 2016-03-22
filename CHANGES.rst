@@ -10,6 +10,8 @@ Changelog
 - Add the Request mapper
   [mpeeters]
 
+- Removed accented chars in sql
+  [sgeulette]
 
 0.1 (2014-10-17)
 ----------------
