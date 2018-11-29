@@ -4,7 +4,8 @@ Changelog
 0.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add a function to return a session not bound to a transaction manager
+  [mpeeters]
 
 
 0.2 (2016-04-22)
