@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.2.2 (unreleased)
+0.3.0 (2018-12-03)
 ------------------
 
 - Add the mapper for the `router` table
