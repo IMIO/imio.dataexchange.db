@@ -5,12 +5,13 @@ from imio.dataexchange.db import DBSession
 from imio.dataexchange.db import DeclarativeBase
 from imio.dataexchange.db.mappers.file import File
 from imio.dataexchange.db.mappers.request import Request
+from imio.dataexchange.db.mappers.router import Router
 from sqlalchemy import engine_from_config
 
 import argparse
 import os
 
-File, Request  # Pyflakes fix
+File, Request, Router  # Pyflakes fix
 
 
 def main():
