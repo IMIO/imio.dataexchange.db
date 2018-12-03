@@ -4,7 +4,11 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add the mapper for the `router` table
+  [mpeeters]
+
+- Add the column to store the response in the database
+  [mpeeters]
 
 
 0.2.1 (2018-11-29)
