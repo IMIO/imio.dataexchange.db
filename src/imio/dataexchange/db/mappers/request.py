@@ -18,5 +18,7 @@ class Request(DeclarativeBase, MapperBase):
 
     expiration_date = Column(u'expiration_date', DateTime)
 
+    response = Column(u'response', Text, nullable=True)
+
     expired = Column(u'expired', Boolean, nullable=False,
                      server_default='false')
