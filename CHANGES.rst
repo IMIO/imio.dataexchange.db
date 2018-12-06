@@ -4,7 +4,8 @@ Changelog
 0.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add `delete` method on mappers
+  [mpeeters]
 
 
 0.3.0 (2018-12-03)

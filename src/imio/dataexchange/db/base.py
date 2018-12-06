@@ -24,6 +24,13 @@ class MapperBase(object):
 
     update = insert
 
+    def delete(self, flush=False, commit=False):
+        DBSession.delete(self)
+        if flush is True:
+            DBSession.flush()
+        if commit is True:
+            DBSession.commit()
+
     @classmethod
     def exists(cls, **kwargs):
         return DBSession.query(exists().where(cls._build_filter(**kwargs))).scalar()
