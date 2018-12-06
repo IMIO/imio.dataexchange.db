@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3.1 (unreleased)
+0.3.1 (2018-12-06)
 ------------------
 
 - Add `delete` method on mappers
