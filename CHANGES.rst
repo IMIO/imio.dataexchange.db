@@ -4,8 +4,11 @@ Changelog
 0.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add file type "Email entrant" in DB
+  [ndemonte]
 
+- Handle potentially optional type metadata
+  [ndemonte]
 
 0.3.1 (2018-12-06)
 ------------------
