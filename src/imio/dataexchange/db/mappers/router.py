@@ -25,4 +25,4 @@ class Router(DeclarativeBase, MapperBase):
 
     application_id = sa.Column(u'application_id', sa.Text, nullable=False)
 
-    url = sa.Column(u'url', sa.Text, nullable=False, unique=True)
+    url = sa.Column(u'url', sa.Text, nullable=False)

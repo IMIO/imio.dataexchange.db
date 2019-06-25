@@ -4,7 +4,8 @@ Changelog
 0.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove unicity constraint on url column for `router` table
+  [mpeeters]
 
 
 0.3.2 (2019-05-22)
