@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3.3 (unreleased)
+0.4.0 (2019-09-11)
 ------------------
 
 - Update request table schema
