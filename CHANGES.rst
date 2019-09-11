@@ -4,6 +4,9 @@ Changelog
 0.3.3 (unreleased)
 ------------------
 
+- Update request table schema
+  [mpeeters]
+
 - Add `session` parameter to use a specific session with mapper methods
   [mpeeters]
 
