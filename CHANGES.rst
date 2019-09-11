@@ -4,6 +4,9 @@ Changelog
 0.3.3 (unreleased)
 ------------------
 
+- Add `session` parameter to use a specific session with mapper methods
+  [mpeeters]
+
 - Remove unicity constraint on url column for `router` table
   [mpeeters]
 

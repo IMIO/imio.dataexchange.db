@@ -15,25 +15,31 @@ class MapperBase(object):
             filters.append(column == value)
         return operator(*filters)
 
-    def insert(self, flush=False, commit=False):
-        DBSession.add(self)
+    def insert(self, session=None, flush=False, commit=False):
+        if session is None:
+            session = DBSession
+        session.add(self)
         if flush is True:
-            DBSession.flush()
+            session.flush()
         if commit is True:
-            DBSession.commit()
+            session.commit()
 
     update = insert
 
-    def delete(self, flush=False, commit=False):
-        DBSession.delete(self)
+    def delete(self, session=None, flush=False, commit=False):
+        if session is None:
+            session = DBSession
+        session.delete(self)
         if flush is True:
-            DBSession.flush()
+            session.flush()
         if commit is True:
-            DBSession.commit()
+            session.commit()
 
     @classmethod
-    def exists(cls, **kwargs):
-        return DBSession.query(exists().where(cls._build_filter(**kwargs))).scalar()
+    def exists(cls, session=None, **kwargs):
+        if session is None:
+            session = DBSession
+        return session.query(exists().where(cls._build_filter(**kwargs))).scalar()
 
     @classmethod
     def first(cls, options=[], order_by=[], **kwargs):
@@ -51,8 +57,10 @@ class MapperBase(object):
         return query.all()
 
     @classmethod
-    def query(cls, options=[], order_by=[], **kwargs):
-        query = DBSession.query(cls)
+    def query(cls, options=[], order_by=[], session=None, **kwargs):
+        if session is None:
+            session = DBSession
+        query = session.query(cls)
         query = query.options(options)
         if order_by:
             if isinstance(order_by, list):
