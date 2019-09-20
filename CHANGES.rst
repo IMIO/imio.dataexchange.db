@@ -4,7 +4,8 @@ Changelog
 0.4.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve indexing on `request` table that avoid error with to large response
+  [mpeeters]
 
 
 0.4.0 (2019-09-11)
