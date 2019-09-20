@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4.1 (unreleased)
+0.4.1 (2019-09-20)
 ------------------
 
 - Improve indexing on `request` table that avoid error with to large response
