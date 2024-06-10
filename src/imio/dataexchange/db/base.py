@@ -10,7 +10,7 @@ class MapperBase(object):
     @classmethod
     def _build_filter(cls, operator=and_, **kwargs):
         filters = []
-        for key, value in kwargs.items():
+        for key, value in list(kwargs.items()):
             column = getattr(cls, key)
             filters.append(column == value)
         return operator(*filters)
