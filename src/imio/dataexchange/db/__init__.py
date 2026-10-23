@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
 
-from zope.sqlalchemy import ZopeTransactionExtension
 
-
-DBSession = scoped_session(sessionmaker(extension=ZopeTransactionExtension()))
+# Apps that want the transaction manager call zope.sqlalchemy.register(DBSession)
+DBSession = scoped_session(sessionmaker())
 DeclarativeBase = declarative_base()
 
 
