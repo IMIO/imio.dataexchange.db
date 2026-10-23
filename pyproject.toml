@@ -1,0 +1,16 @@
+[project]
+name = "imio.dataexchange.db"
+version = "0.5.0.dev0"
+description = "SQLAlchemy mappers for iMio data exchange"
+readme = "README.rst"
+license = "GPL-2.0-or-later"
+authors = [{ name = "IMIO", email = "support@imio.be" }]
+requires-python = ">=3.10"
+dependencies = ["psycopg2", "SQLAlchemy"]
+
+[project.scripts]
+init_db = "imio.dataexchange.db.scripts.init_db:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
