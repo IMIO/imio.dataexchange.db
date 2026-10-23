@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.5.0 (unreleased)
+0.5.0 (2026-10-23)
 ------------------
 
 - Migrated to uv (pyproject.toml), Python 3 and SQLAlchemy 2.
